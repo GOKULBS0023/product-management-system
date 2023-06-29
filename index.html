@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management System</title>
+    <meta name="description" content="product-management-system">
+    <!-- Google Font Lato  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Product Management System</h1>
+    </header>
+    <section class="content">
+        <form class="product__details-from">
+            <div class="pricing__section">
+                <div class="title">
+                    <input type="text" placeholder="Title" class="input__title" required>
+                </div>
+                <div class="costs">
+                    <input type="number" class="input__price" id="price" placeholder="Price" required>
+                    <input type="number" class="input__taxes" id="taxes" placeholder="Taxes">
+                    <input type="number" class="input__ads" id="ads" placeholder="Ads">
+                    <input type="number" class="input__discount" id="discount" placeholder="Discount">
+                    <div class="output__total" id="total">Total: <span class="total">0</span></div>
+                </div>
+            </div>
+            <div class="details__section">
+                    <input type="text" placeholder="Count" class="input__count" min="1">
+                    <input type="text" placeholder="Category" class="input__category" required>
+                    <button type="submit" name="create" class="btn">Create</button>
+            </div>
+        </form>
+        <form class="search-form">
+            <h2>Search:</h2>
+            <div class="search__section">
+                    <input type="text" placeholder="Search" class="input__search">
+                    <button type="submit" name="category">Search by Category</button>
+                    <button type="submit" name="title">Search by Title</button>
+            </div>
+        </form>
+        <div class="products__section">
+            <h2>Products:</h2>
+
+            <div class="table__container">
+                <table class="table">
+                    <tr class="table__head">
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Tax</th>
+                        <th>Ads</th>
+                        <th>Discount</th>
+                        <th>Total</th>
+                        <th>Category</th>
+                        <th class="center">Update</th>
+                        <th class="center">Delete</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>
