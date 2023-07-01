@@ -279,10 +279,9 @@ const searchType = (event) => {
   searchProduct();
 };
 const searchProduct = () => {
+  resetInput();
   getProducts();
-  console.log(type);
   const searchInput = searchInputEl.value.toLowerCase().trim();
-  console.log(searchInput);
   let filteredProducts;
   if (type === "title") {
     filteredProducts = products.filter((product) => {
